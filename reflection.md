@@ -6,7 +6,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
-  (for example: "the secret number kept changing" or "the hints were backwards").
+  (for example: "the hints were backwards").
 
 --- The new game button doesn't work. 
 Score doesn't work in order
@@ -38,8 +38,8 @@ Yes — AI pointed out that guess_key was being referenced in the debug expander
 
 ## 4. What did you learn about Streamlit and state?
 
-- In your own words, explain why the secret number kept changing in the original app.\
-Streamlit was rerunning the whole script  from the top, and picks new secret each time when the user clicked anything because the code had st.session_state.secret = random.randint(low, high) without checking if a secret already existed. 
+- In your own words, explain why the secret number kept changing in the original app.
+Streamlit was rerunning the whole script from the top, and picks new secret each time when the user clicked anything because the code had st.session_state.secret = random.randint(low, high) without checking if a secret already existed.
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 Imagine every time you click a button on a webpage, the entire page gets rebuilt from scratch — like refreshing it. That's what Streamlit does. session_state is like a sticky note on the side that survives the refresh. Without it, everything resets. With it, you can remember things like "the secret is 42" even after the page rebuilds.
